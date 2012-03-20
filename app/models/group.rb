@@ -1,5 +1,5 @@
 class Group < ActiveRecord::Base
-
+  paginates_per 5
   extend FriendlyId
   friendly_id :name, :use => :slugged
 

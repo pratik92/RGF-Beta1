@@ -1,4 +1,5 @@
 class DashboardsController < ApplicationController
+  before_filter :authenticate_user!
 
  def index
   @my_listings = Listing.paginate(:page => params[:page],

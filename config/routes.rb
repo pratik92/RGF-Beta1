@@ -1,5 +1,9 @@
 RealGoodFood::Application.routes.draw do
 
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   resources :blogs
 
   root :to => 'home#index'
@@ -18,8 +22,9 @@ RealGoodFood::Application.routes.draw do
   get 'friend_ship' => "friendships#create", :as => "friend_ship"
 
 
-  devise_for :users, :controllers => { :registrations => "registrations" } do
+  devise_for :users, :controllers => { :registrations => "registrations", :omniauth_callbacks => "users/omniauth_callbacks" } do
     get '/users/sign_out' => 'devise/sessions#destroy'
+    get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
   end
 
 

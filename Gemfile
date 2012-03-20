@@ -15,13 +15,18 @@ gem "geocoder"
 gem "friendly_id", "~> 4.0.0.beta8"
 gem 'gravatar_image_tag'
 gem 'gmaps4rails'
-gem 'will_paginate'
+#gem 'will_paginate'
 gem 'simple_form'
 gem "nested_form", :git => 'git://github.com/ryanb/nested_form.git'
 gem 'amistad'
-gem "ckeditor", "~> 3.6.0"
+gem "ckeditor", "3.7.0.rc3"
 gem "carrierwave"
 gem "mini_magick"
+gem "omniauth-facebook"
+  gem 'activeadmin'
+  gem "meta_search",    '>= 1.1.0.pre'
+gem 'kaminari'
+gem 'formtastic'
 
 # Gems used only for assets and not required
 # in production environments by default.

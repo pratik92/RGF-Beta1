@@ -6,7 +6,7 @@ class Listing < ActiveRecord::Base
   geocoded_by :location_address  
   after_validation :geocode  
   after_validation :geocode, :if => :location_address_changed?  
-
+  paginates_per 10
   extend FriendlyId
   friendly_id :title, :use => :slugged
 

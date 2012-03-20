@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
   def index
     @json   = Event.find(:all).to_gmaps4rails
-    @event  = Event.paginate(:page => params[:page], :per_page => 3)
-    @group  = Group.paginate(:page => params[:page], :per_page => 3)
-    @listing  = Listing.paginate(:page => params[:page], :per_page => 3)
+    @event  = Event.order(:created_at).page params[:page]
+    @group  = Group.order(:created_at).page params[:page]
+    @listing  = Listing.order(:create_at).page params[:page]
   end
 
   def how_it_works
