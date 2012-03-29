@@ -83,8 +83,8 @@ h1 {
 	}
 
 h2 {
-        font-family: 'Fresca', sans-serif;
-	font-size: 20px;
+        font-family: Museo-300;
+	font-size: 18px;
 	padding: 20px 0;
 	}
 	
@@ -237,7 +237,7 @@ nav ul li.subscribe a {
 }
 
 #content .block {
-	height: 320px;
+	height: 280px;
 	font-size: 1em;
 	margin-right: 10px; /*Creates the 10px gap between each column*/
 	padding: 20px;
