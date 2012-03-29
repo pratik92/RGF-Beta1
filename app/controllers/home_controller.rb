@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
   def index
     @json   = Event.find(:all).to_gmaps4rails
-    @event  = Event.order(:created_at).page params[:page]
-    @group  = Group.order(:created_at).page params[:page]
-    @listing  = Listing.order(:create_at).page params[:page]
+    @event  = Event.page(3)
+    @group  = Group.page(3)
+    @listing  = Listing.page(3)
   end
 
   def how_it_works
@@ -13,3 +13,4 @@ class HomeController < ApplicationController
   def terms_and_conditions 
   end
 end
+

@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-
+authorize_resource :only => [:index, :show]
   # GET /blogs
   # GET /blogs.json
   def index

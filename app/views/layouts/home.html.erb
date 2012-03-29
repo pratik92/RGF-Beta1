@@ -64,154 +64,43 @@
 <section id="content">
 <ul class="column">
 
-<h2 class="header-alt">Events</h2>
 <!--eqblock-->
    <li>
       <section class="block">
-	<a href="#"><img src="images/1-thumb.jpg" alt=""  /></a> 
-        <h2><a href="#">Coffee 101</a></h2> 
-      <p>Proin metus odio, ultricies eu pharetra dictum, laoreet id odio. Curabitur in odio </p> 
-        <a href="#" class="button yellow">Read More</a>
+	<%= link_to image_tag("meal.png"), listings_path %> 
+        <h2><%= link_to "Discover and Eat Food", listings_path %></h2> 
+      <p>Find Food, Be a locavore or Share your food creations with your local community. Spread love, kindness and brotherhood</a> </p> 
+        <a href="/listings" class="button yellow">start scoffing</a>
       </section>
    </li>
     <!--eqblock-->
 
    <li>
       <section class="block">
-       <a href="#"><img src="images/2-thumb.jpg" alt=""  /></a> 
-       <h2><a href="#">All About Beans</a></h2> 
-      <p>Morbi congue auctor interdum. Proin metus odio, ultricies eu pharetra dictum, laoreet id odio. Curabitur in odio augue. Phasellus sit amet metus justo. </p> 
-       <a href="#" class="button yellow">Read More</a>
+       <a href="#"><%=link_to image_tag("calendar.png"), events_path %></a> 
+       <h2><%= link_to "Create and Attend Events", events_path %></h2> 
+      <p>Find events happening near you, attend cook offs, learn recipes or host one to flaunt what you cook the best. </p> 
+       <a href="#" class="button yellow">start scoffing</a>
       </section>
     </li>
   <!--eqblock-->
 
     <li>
       <section class="block">
-       <a href="#"><img src="images/3-thumb.jpg" alt=""  /></a> 
-       <h2><a href="#">Compatible Foods</a></h2> 
-      <p>Phasellus sit amet metus justo. Proin metus odio, ultricies eu pharetra dictum, laoreet id odio. Curabitur in odio augue. Morbi congue auctor. </p> 
-       <a href="#" class="button yellow">Read More</a>
-      </section>
-    </li>
-
-<!--eqblock-->
-    <li>
-      <section class="block">
-       <a href="#"><img src="images/4-thumb.jpg" alt=""  /></a> 
-       <h2><a href="#">Coffee Sizzle</a></h2> 
-      <p>Proin metus odio, ultricies eu pharetra dictum, laoreet id odio. Morbi congue auctor interdum. Curabitur in odio augue. Phasellus sit amet metus justo. </p> 
-       <a href="#" class="button yellow">Read More</a>
-      </section>
-    </li>
-
-</ul>
-
-<!--eqblock-->
-<ul class="column">
-<h2 class="header-alt">Listings</h2>
-<!--eqblock-->
-<% @listing.each do |l| %>      
-  <% if l.photo.exists? then %>
-   <li>
-     <section class="block">
-       <a><%= link_to image_tag(l.photo.url(:thumb)),l  %></a>
-       <h2><%= link_to l.title, l %></h2>
-<p>Proin metus odio, ultricies eu pharetra dictum, laoreet id odio. Curabitur in odio </p> 
-        <a href="listings/<%= l.slug %>" class="button yellow">Read More</a>
-      </p>
-     </section>
-   </li>
-<br>
-  <% end %><% end %>
-</ul>
-      
-
-	<a href="#"><img src="images/1-thumb.jpg" alt=""  /></a> 
-        <h2><a href="#">Coffee 101</a></h2> 
-      <p>Proin metus odio, ultricies eu pharetra dictum, laoreet id odio. Curabitur in odio </p> 
-        <a href="#" class="button yellow">Read More</a>
-      </section>
-   </li>
-    <!--eqblock-->
-
-   <li>
-      <section class="block">
-       <a href="#"><img src="images/2-thumb.jpg" alt=""  /></a> 
-       <h2><a href="#">All About Beans</a></h2> 
-      <p>Morbi congue auctor interdum. Proin metus odio, ultricies eu pharetra dictum, laoreet id odio. Curabitur in odio augue. Phasellus sit amet metus justo. </p> 
-       <a href="#" class="button yellow">Read More</a>
-      </section>
-    </li>
-  <!--eqblock-->
-
-    <li>
-      <section class="block">
-       <a href="#"><img src="images/3-thumb.jpg" alt=""  /></a> 
-       <h2><a href="#">Compatible Foods</a></h2> 
-      <p>Phasellus sit amet metus justo. Proin metus odio, ultricies eu pharetra dictum, laoreet id odio. Curabitur in odio augue. Morbi congue auctor. </p> 
-       <a href="#" class="button yellow">Read More</a>
-      </section>
-    </li>
-
-<!--eqblock-->
-    <li>
-      <section class="block">
-       <a href="#"><img src="images/4-thumb.jpg" alt=""  /></a> 
-       <h2><a href="#">Coffee Sizzle</a></h2> 
-      <p>Proin metus odio, ultricies eu pharetra dictum, laoreet id odio. Morbi congue auctor interdum. Curabitur in odio augue. Phasellus sit amet metus justo. </p> 
-       <a href="#" class="button yellow">Read More</a>
+       <a href="#"><%=link_to image_tag("users.png"), groups_path %></a> 
+       <h2><%= link_to "Join or Start a Group", groups_path %></h2> 
+      <p>Create a food community in your area, be a food activist or join an existing movment. Enjoy lovely food all the time </p> 
+       <a href="#" class="button yellow">start scoffing</a>
       </section>
     </li>
 
 
 </ul>
 
-<ul class="column">
-  <h2 class="header-alt"> Groups</h2>
 <!--eqblock-->
-   <li>
-      <section class="block">
-	<a href="#"><img src="images/1-thumb.jpg" alt=""  /></a> 
-        <h2><a href="#">Coffee 101</a></h2> 
-      <p>Proin metus odio, ultricies eu pharetra dictum, laoreet id odio. Curabitur in odio </p> 
-        <a href="#" class="button yellow">Read More</a>
-      </section>
-   </li>
-    <!--eqblock-->
+</section>
 
-   <li>
-      <section class="block">
-       <a href="#"><img src="images/2-thumb.jpg" alt=""  /></a> 
-       <h2><a href="#">All About Beans</a></h2> 
-      <p>Morbi congue auctor interdum. Proin metus odio, ultricies eu pharetra dictum, laoreet id odio. Curabitur in odio augue. Phasellus sit amet metus justo. </p> 
-       <a href="#" class="button yellow">Read More</a>
-      </section>
-    </li>
-  <!--eqblock-->
 
-    <li>
-      <section class="block">
-       <a href="#"><img src="images/3-thumb.jpg" alt=""  /></a> 
-       <h2><a href="#">Compatible Foods</a></h2> 
-      <p>Phasellus sit amet metus justo. Proin metus odio, ultricies eu pharetra dictum, laoreet id odio. Curabitur in odio augue. Morbi congue auctor. </p> 
-       <a href="#" class="button yellow">Read More</a>
-      </section>
-    </li>
-
-<!--eqblock-->
-    <li>
-      <section class="block">
-       <a href="#"><img src="images/4-thumb.jpg" alt=""  /></a> 
-       <h2><a href="#">Coffee Sizzle</a></h2> 
-      <p>Proin metus odio, ultricies eu pharetra dictum, laoreet id odio. Morbi congue auctor interdum. Curabitur in odio augue. Phasellus sit amet metus justo. </p> 
-       <a href="#" class="button yellow">Read More</a>
-      </section>
-    </li>
-                                    </ul>
-
-				    <!--eqblock-->
-		</section>
 		
 	<footer>
     <section>
@@ -234,5 +123,8 @@
 
 	</footer>
 <!-- Free template created by http://freehtml5templates.com -->
+<!-- start Mixpanel --><script type="text/javascript">(function(d,c){var a,b,g,e;a=d.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===d.location.protocol?"https:":"http:")+'//api.mixpanel.com/site_media/js/api/mixpanel.2.js';b=d.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);c._i=[];c.init=function(a,d,f){var b=c;"undefined"!==typeof f?b=c[f]=[]:f="mixpanel";g="disable track track_links track_forms register register_once unregister identify name_tag set_config".split(" ");for(e=0;e<
+g.length;e++)(function(a){b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,0)))}})(g[e]);c._i.push([a,d,f])};window.mixpanel=c})(document,[]);
+mixpanel.init("1beae669de3dc361b3d45a44cf18a3f5");</script><!-- end Mixpanel -->
 </body>
 </html>

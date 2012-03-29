@@ -58,11 +58,10 @@
     <div class="container">
         <div class="box">
      <b style = "font-size :20px"><%= link_to blog.title, blog %></b><br>
-     <%= truncate blog.body, :length => 100 %>
+     <%= truncate(blog.body, :length => 1500).html_safe %>
       <%= link_to "continued", blog %><br>
 </div></div>
 <% end %>
 
 <br />
 
-<%= link_to 'New Blog', new_blog_path %>
