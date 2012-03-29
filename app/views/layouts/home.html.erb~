@@ -11,14 +11,15 @@
         <%= javascript_include_tag "jquery.js" %>
         <%= javascript_include_tag "facebox.js" %>
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
-      $('a[rel*=facebox]').facebox({
-        loadingImage : '../images/loading.gif',
-        closeImage   : '../images/closelabel.png'
-      })
-    })
+jQuery(document).ready(function($) {
+  $("a[rel*=facebox]").facebox();
+$.facebox("#info","facebox",true);
+$.facebox.settings.closeImage = '../images/facebox/closelabel.png';
+$.facebox.settings.opacity = 1.0;
+})
   </script>
-<link href='http://fonts.googleapis.com/css?family=Fresca' rel='stylesheet' type='text/css'>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Fresca' rel='stylesheet' type='text/css'> -->
 <%= stylesheet_link_tag "MyFontsWebfontsKit.css" %>
 <%= stylesheet_link_tag "buttons.css" %>
 
@@ -50,13 +51,15 @@
 		<p>* Do you love cooking? </p><p>* Do you appreciate local or <br/>fresh food?</p><p>* Are you interested in discovering <br/>ethnical food cooked by the <br/>experts with recipes from back <br/>home? </p><p>* So RGF is the right place for you! <br/><br/><a href="#info" rel="facebox" class="button orange">Know More</a> 
 </p>
 <div id="info" style="display:none;" hidden="true">
-    <p> Hey, I'm the 'info' div! </p>
-    <p> I look like this: </p>
-    <code>
-      &lt;div id="info" style="display:none;"&gt; <br/>
-        &nbsp;&nbsp;text<br/>
-      &lt;/div&gt;
-    </code>
+<p></p>
+    <p style="font-size:20px;">Welcome to Real Good Food - our site is still under construction but if you're still interested in the site itself feel free to poke around and please do share your feedback </p>
+    <p></p>
+<p><a href="http://www.rossroadrules.com/realgoodfood/" rel="facebox" class="button green" target="blank">Read our blog</a> &nbsp; <a href="https://www.facebook.com/RealGoodFood" rel="facebox" class="button blue" target="blank">Like Us on Facebook</a>&nbsp;<a href="http://vimeo.com/38206084" rel="facebox" class="button purple" target="blank">Watch the Video</a></p><p> <a href="https://twitter.com/#!/devinmc" rel="facebox" class="button twitter-blue" target="blank">Use #realgoodfood @devinmc on twitter </a> </p>
+
+
+<iframe src="http://player.vimeo.com/video/38206084?title=0&amp;byline=0&amp;portrait=0" width="800" height="450" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p><a href="http://vimeo.com/38206084">Real Good Food - The Sharing Economy Made Tasty</a> from <a href="http://vimeo.com/gianteelproductions">Giant Eel Productions</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+
+
   </div>
 		<img src="images/rgf1.png" />
 </section>
