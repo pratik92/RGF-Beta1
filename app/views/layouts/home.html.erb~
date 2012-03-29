@@ -70,7 +70,7 @@
 	<%= link_to image_tag("meal.png"), listings_path %> 
         <h2><%= link_to "Discover and Eat Food", listings_path %></h2> 
       <p>Find Food, Be a locavore or Share your food creations with your local community. Spread love, kindness and brotherhood</a> </p> 
-        <a href="/listings" class="button yellow">Go for it</a>
+        <a href="/listings" class="button yellow">start scoffing</a>
       </section>
    </li>
     <!--eqblock-->
@@ -80,7 +80,7 @@
        <a href="#"><%=link_to image_tag("calendar.png"), events_path %></a> 
        <h2><%= link_to "Create and Attend Events", events_path %></h2> 
       <p>Find events happening near you, attend cook offs, learn recipes or host one to flaunt what you cook the best. </p> 
-       <a href="#" class="button yellow">Go for it</a>
+       <a href="#" class="button yellow">start scoffing</a>
       </section>
     </li>
   <!--eqblock-->
@@ -90,7 +90,7 @@
        <a href="#"><%=link_to image_tag("users.png"), groups_path %></a> 
        <h2><%= link_to "Join or Start a Group", groups_path %></h2> 
       <p>Create a food community in your area, be a food activist or join an existing movment. Enjoy lovely food all the time </p> 
-       <a href="#" class="button yellow">Go for it</a>
+       <a href="#" class="button yellow">start scoffing</a>
       </section>
     </li>
 
