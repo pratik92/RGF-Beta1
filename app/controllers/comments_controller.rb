@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
   before_filter :authenticate_user!
+skip_authorization_check :only => [:index, :show, :new, :edit]
+
   #uses_tiny_mce :only => [:new, :create, :edit, :update]
   #uses_tiny_mce :options => {
      #                         :theme => 'advanced',

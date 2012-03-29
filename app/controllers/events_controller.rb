@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_filter :authenticate_user!
+skip_authorization_check :only => [:index, :show, :new, :edit]
 
   # GET /events
   # GET /events.json
