@@ -1,7 +1,7 @@
 class ListingsController < ApplicationController
   before_filter :authenticate_user!
 #authorize_resource :except => [:index, :show, :new, :edit]
-skip_authorization_check :only => [:index, :show, :new, :edit]
+skip_authorization_check :only => [:index, :show, :new, :edit, :create, :update]
   # GET /listings
   # GET /listings.json
   def index
